@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design & Font Units | KeshavAbhishek.com</title>
+    <style>
+        html {
+            font-size: 15px;
+        }
+
+        .container {
+            border: 2px solid red;
+            font-size: 10px;
+            height: 100vh;
+            /* Sets height of any element to value-vh% of view port height */
+            width: 100vw;
+            /* Sets width of any element to value-vw% of view port width */
+        }
+
+        #line6 {
+            font-size: 5em;
+            /* Here em takes reference from font-size of its parent container */
+            padding: 2em;
+            /* Here em takes reference from font-size of its own container */
+        }
+
+        #line5 {
+            font-size: 2rem;
+            /* Here rem takes reference from its root location */
+            padding: 0.4rem;
+            /* Here rem takes reference from its root location */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="line1" style="text-align: center;">This is line 1</h1>
+        <h2 id="line2" style="text-align: center;">This is line 2</h2>
+        <h3 id="line3" style="text-align: center;">This is line 3</h3>
+        <h4 id="line4" style="text-align: center;">This is line 4</h4>
+        <h5 id="line5" style="text-align: center;">This is line 5</h5>
+        <h6 id="line6" style="text-align: center;">This is line 6</h6>
+    </div>
+</body>
+
+</html>

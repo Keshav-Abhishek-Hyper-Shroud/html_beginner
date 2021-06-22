@@ -1,0 +1,37 @@
+#MainFrame{
+    background-color: #ffebef;
+    border: 3px solid red;
+    padding: 10px 10px;
+    border-radius: 3pc;
+    box-sizing: border-box;
+}
+
+.innerFrame{
+    border: 2px solid #6c6cbb;
+    background-color: #f9d5f9;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-radius: 3pc;
+    width: 900px;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+}
+
+#heading1{
+    float: left;
+}
+
+#heading2{
+    float: right;
+}
+
+#heading3{
+    clear: both;
+}
+
+.innerFrame:hover{
+    text-shadow: 110px 110px blue;
+    height: 300px;
+    padding: 50px 50px;
+}

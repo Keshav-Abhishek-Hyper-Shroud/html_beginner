@@ -1,0 +1,24 @@
+/*
+CSS Syntax
+
+p { color: blue; }
+↑     ↑      ↑
+S     P      V
+E     R      A
+L     O      L
+E     P      U
+C     E      E
+T     R
+O     T
+R     Y
+*/
+
+#myColor{
+    color: red;
+    border-width: 2px;
+    border-style: double;
+    border-top-color: yellow;
+    border-left-color: red;
+    border-right-color: blue;
+    border-bottom-color: goldenrod;
+}

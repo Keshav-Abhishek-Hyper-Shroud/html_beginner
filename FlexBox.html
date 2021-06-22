@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox | KeshavAbhishek.com</title>
+    <style>
+        .container {
+            width: auto;
+            height: 300px;
+            border: 2px solid #f7eaf7;
+            background-color: #f7eaf7;
+            display: flex; /* Initializes FlexBox */
+
+            /* These following properties are flex-container properties */
+
+            /* flex-direction: row; (defalut) */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+
+            /* flex-wrap: wrap; (flex-wrap: no-wrap; [by default]) */
+
+            /* flex-flow: row-reverse wrap; sets flex-direction and flex-wrap in one line */
+
+            /* justify-content justifies the content in horizontal-direction */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+            /* justify-content: center; */
+
+            /* align-items justifies the content in vertical-direction */
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: stretch; */
+        }
+
+        .item {
+            width: 92px;
+            height: 100px;
+            border: 2px dashed tomato;
+            margin: 10px;
+            background-color: #bff3ee;
+        }
+
+        #item-1{
+            /* order: 2; If order is high then that element will be at end */
+            flex-grow: 1; /* Higher is the value of flex-grow will expand comparatively faster than other and vice-versa */
+            flex-shrink: 1;
+        }
+
+        #item-2{
+            /* order: 1; If order is low then that element will be at start */
+            flex-grow: 2;
+            flex-shrink: 2;/* Higher is the value of flex-grow will shrink comparatively faster than other and vice-versa */
+        }
+
+        #item-3{
+            flex-basis: 200px;
+            /* When flex-direction is row then flex-basis will control width */
+            /* When flex-direction is columns then flex-basis will control height */
+        }
+
+        #item-4{
+            /* flex-grow flex-shrink flex-basis - in one-line (shorthand)*/
+            flex: 3 2 250px;
+        }
+
+        #item-5{
+            align-self: center;
+            align-self: flex-start;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FlexBox Intro</h1>
+    <div class="container">
+        <div class="item" id="item-1">This is Box-1</div>
+        <div class="item" id="item-2">This is Box-2</div>
+        <div class="item" id="item-3">This is Box-3</div>
+        <div class="item" id="item-4">This is Box-4</div>
+        <div class="item" id="item-5">This is Box-5</div>
+        <div class="item" id="item-6">This is Box-6</div>
+    </div>
+</body>
+
+</html>

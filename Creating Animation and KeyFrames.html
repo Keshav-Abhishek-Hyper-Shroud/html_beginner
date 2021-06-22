@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Animation & KeyFrames | KeshavAbhishek.com</title>
+    <style>
+        body {
+            padding: 0%;
+            top: 0%;
+            left: 0%;
+        }
+
+        .load-1 {
+            border: 2px solid red;
+            width: 500px;
+            height: 15px;
+            position: relative;
+        }
+
+        .run-1{
+            width: 500px;
+            height: 15px;
+            position: relative;
+            background-color: cyan;
+
+            animation-name: loading-1;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .load-2 {
+            border: 2px solid red;
+            height: 500px;
+            width: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .run-2{
+            height: 500px;
+            width: 15px;
+            position: relative;
+            background-color: cyan;
+
+            animation-name: loading-2;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .load-3 {
+            border: 2px solid red;
+            height: 500px;
+            width: 15px;
+            position: relative;
+            left: 462px;
+            display: inline-block;
+        }
+
+        .run-3{
+            height: 500px;
+            width: 15px;
+            position: relative;
+            background-color: cyan;
+
+            animation-name: loading-3;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .load-4 {
+            border: 2px solid red;
+            width: 500px;
+            height: 15px;
+            position: relative;
+            top: -5px;
+        }
+
+        .run-4{
+            width: 500px;
+            height: 15px;
+            background-color: cyan;
+
+            animation-name: loading-4;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        /* Providing Animation */
+
+        @keyframes loading-1 {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 500px;
+            }
+        }
+
+        @keyframes loading-2 {
+            from {
+                height: 0px;
+            }
+
+            to {
+                height: 500px;
+            }
+        }
+
+        @keyframes loading-3 {
+            from {
+                height: 0px;
+            }
+
+            to {
+                height: 500px;
+            }
+        }
+
+        @keyframes loading-4 {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="load-1">
+        <div class="run-1"></div>
+    </div>
+
+    <div class="load-2">
+        <div class="run-2"></div>
+    </div>
+
+    <div class="load-3">
+        <div class="run-3"></div>
+    </div>
+
+    <div class="load-4">
+        <div class="run-4"></div>
+    </div>
+</body>
+
+</html>

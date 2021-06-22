@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <title>Position in CSS | KeshavAbhishek.com</title>
+    <style>
+
+        /* CSS Position: static(default), relative, absolute, fixed, sticky */
+
+        /* relaive: Position of an element which is relative to its normal/current position */
+        /* absolute: Position of an element which is relative to its parent position */
+        /* fixed: Position of an element related to browser window */
+        /* sticky: The ele */
+
+        .box{
+            border: 2px solid red;
+            margin: 5px 5px;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        .box:hover{
+            text-align: center;
+        }
+
+        #box3{
+            position: relative;
+            top: 75px;
+            left: 90px;
+        }
+
+        #box2{
+            position: relative;
+            top: 154px;
+            left: 182px;
+        }
+
+        #box1{
+            position: relative;
+            top: 229px;
+            left: 272px;
+        }
+
+        .container{
+            height: 1080px;
+            width: 2000px;
+        }
+
+        .textEdit{
+            position: fixed;
+            right: 5px;
+            bottom: 5px;
+            font-size: 25px;
+            font-family: 'Viaoda Libre',cursive;
+            width: 380px;
+            font-weight: bolder;
+        }
+
+        button{
+            position: sticky;
+            top: 10px;
+            left: 300px;
+            font-family: 'Viaoda Libre',cursive;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">    
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <input type="text" class="textEdit" placeholder="Type Here">
+        <button class="pushButton">I AM CHIPKU</button>
+    </div>
+</body>
+</html>

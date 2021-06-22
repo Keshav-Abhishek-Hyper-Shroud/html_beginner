@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth pseudo selector | KeshavAbhishek.com</title>
+    <style>
+        body{
+            background-color: red;
+        }
+
+        h1{
+            font-weight: bolder;
+            text-align: center;
+            font-size: 60px;
+        }
+
+        h1:hover{
+            color: yellow;
+            background-color: black;
+        }
+
+        div[class="options"]{
+            margin-left: 400px;
+        }
+
+        label[for="chem"]{
+            font-family: "Agency FB";
+            font-size: 50px;
+            font-weight: bolder;
+        }
+
+        label[for="phy"]{
+            font-weight: bolder;
+            font-family: Arial;
+            font-size: 50px;
+        }
+
+        label[for="maths"]{
+            font-family: cursive;
+            font-weight: bolder;
+            font-size: 50px;
+        }
+
+        button{
+            margin-top: 30px;
+            font-size: 30px;
+            display: block;
+            margin: auto;
+            font-family: cursive;
+            font-weight: bolder;
+            font-size: 50px;
+            background-color: transparent;
+            border-radius: 20px;
+            width: auto;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: yellow;
+        }
+
+        input:hover{
+            cursor: pointer;
+        }
+
+        label:hover{
+            color: cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <u><h1>Select Your Subject</h1></u>
+
+    <div class="options">
+        <input type="checkbox" name="chem">
+        <label for="chem">Chemistry</label>
+    </div>
+    
+    <div class="options">
+        <input type="checkbox" name="phy">
+        <label for="phy">Physics</label>
+    </div>
+
+    <div class="options" style="margin-bottom: 20px;">
+        <input type="checkbox" name="maths">
+        <label for="maths">Mathematics</label>
+    </div>
+
+    <button>SUBMIT</button>
+</body>
+</html>

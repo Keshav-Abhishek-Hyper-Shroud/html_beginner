@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable & Custom Properties | KeshavAbhishek.com</title>
+    <style>
+
+        :root{
+            --onhover: white;
+        }
+
+        .container{
+            display: flex;
+        }
+
+        .line-1{
+            --myfg: red;
+            color: var(--myfg);
+            margin: 2px 15px;
+            padding: 2px 5px;
+            cursor: pointer;
+        }
+
+        .line-2{
+            --mybg: yellow;
+            background-color: var(--mybg);
+            padding: 2px 5px;
+            cursor: pointer;
+        }
+
+        .line-3{
+            --mybd: 2px solid red;
+            border: var(--mybd);
+            margin: 2px 15px;
+            padding: 2px 5px;
+            box-shadow: 3px 3px 10px red;
+            cursor: pointer;
+        }
+
+        .line-1:hover{
+            background-color: red;
+            color: var(--onhover);
+            font-weight: bolder;
+        }
+
+        .line-2:hover{
+            color: var(--onhover);
+            background-color: black;
+            font-weight: bolder;
+        }
+
+        .line-3:hover{
+            box-shadow: none;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="line-1">My color will change</div>
+        <div class="line-2">My background color will change</div>
+        <div class="line-3">My border appearance will change</div>
+    </div>
+</body>
+</html>

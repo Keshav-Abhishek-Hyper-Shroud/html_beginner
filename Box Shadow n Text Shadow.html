@@ -1,0 +1,56 @@
+<!-- border: 2px solid red; -->
+<!-- box-shadow: offset-x offset-y color; -->
+<!-- box-shadow: offset-x offset-y blur-radius color; -->
+<!-- box-shadow: offset-x offset-y blur-radius spread-radius color; -->
+<!-- box-shadow: 10px 13px green; -->
+<!-- box-shadow: -10px -13px green; -->
+<!-- box-shadow: 7px 5px 10px green; -->
+<!-- box-shadow: -7px -5px 10px 34px green; -->
+<!-- box-shadow: -7px -5px 10px 34px rgba(71, 172, 172, 0.5); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow | KeshavAbhishek.com</title>
+    <style>
+        
+        .container{
+            display: flex;
+
+        }
+
+        .content{
+            margin: 10px;
+            background-color: sandybrown;
+            font-size: 25px;
+            border-radius: 10px;
+            padding: 15px;
+            text-shadow: 3px 5px 10px red;
+        }
+
+        .content:hover{
+            box-shadow: 5px 5px 20px red;
+            text-shadow: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi perferendis sapiente consequatur necessitatibus asperiores temporibus veritatis ipsam sed quis. Fuga tempora praesentium non pariatur quisquam asperiores placeat voluptatem inventore accusamus.
+        </div>
+
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis qui alias est, magnam impedit veritatis vel rem illo consectetur natus dolorum id et repellat incidunt.
+        </div>
+
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, exercitationem repellendus. Ratione quis excepturi nisi maiores vitae reiciendis. Ad sint laudantium id ea ut maiores earum similique consequuntur? Cupiditate aliquam labore saepe quam soluta voluptatibus rerum maxime ipsam veritatis recusandae, impedit at? Ab, nobis? Magni hic ea quos facere ipsam.
+        </div>
+    </div>
+</body>
+</html>

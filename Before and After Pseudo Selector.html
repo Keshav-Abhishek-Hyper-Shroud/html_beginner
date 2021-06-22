@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&display=swap" rel="stylesheet">
+    <title>Before and After Pseudo Selector | KeshavAbhishek.com</title>
+    <style>
+
+        body{
+            color: white;
+            /* background-color: black; */
+        }
+
+        header::before{
+            content: '';
+            background: url('https://source.unsplash.com/user/erondu/1600x900') no-repeat center center/cover;
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            opacity: 0.9;
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+        }
+
+        li{
+            padding: 10px 30px;
+            font-size: 40px;
+            font-weight: bolder;
+            font-family: 'Big Shoulders Stencil Display', cursive;
+        }
+
+        h1{
+            font-family: 'Stint Ultra Condensed', cursive;
+            font-size: 150px;
+            text-align: center;
+        }
+
+        h1:hover{
+            color: cyan;
+            cursor: default;
+        }
+
+        p{
+            text-align: center;
+            font-size: 30px;
+        }
+
+        li:hover{
+            color: cyan;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contact</li>
+                <li>Rate Us</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1>Welcome to Coding World!!</h1>
+    </div>
+
+    <div class="para">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, assumenda. Porro nemo, hic vel perspiciatis tempora vitae. Quia iste at, dicta molestiae consectetur laboriosam similique perspiciatis autem laborum quibusdam. Velit iusto deleniti accusamus optio inventore molestiae! Vitae, iste, nobis possimus, itaque ut esse a vel asperiores fugit optio et voluptatibus!</p>
+    </div>
+</body>
+</html>
