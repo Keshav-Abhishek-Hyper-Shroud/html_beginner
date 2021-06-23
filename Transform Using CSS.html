@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Using CSS | KeshavAbhishek.com</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+
+        .btn{
+            display: inline-block;
+            margin: 5px 15px;
+            font-family: cursive;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 5px 5px;
+            font-weight: bolder;
+            background-color: white;
+        }
+
+        .btn:hover{
+            background-color: yellow;
+        }
+
+        .buttonFrame{
+            position: relative;
+            top: 200px;
+        }
+
+        #b-1:hover{
+            transform: rotate(45deg);
+        }
+
+        #b-2:hover{
+            transform: rotate(-45deg);
+        }
+
+        #b-3:hover{
+            transform: scale(1.5);
+        }
+
+        #b-4:hover{
+            transform: translateX(150px);
+        }
+
+        #b-5:hover{
+            transform: translateY(150px);
+        }
+
+        #b-6:hover{
+            transform: translate(150px, 150px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="buttonFrame">
+        <label id="b-1" class="btn">Clockwise 45</label>
+        <label id="b-2" class="btn">Anti-Clockwise 45</label>
+        <label id="b-3" class="btn">Scale twice</label>
+        <label id="b-4" class="btn">Move in X</label>
+        <label id="b-5" class="btn">Move in Y</label>
+        <label id="b-6" class="btn">Move in Both</label>
+    </div>
+</body>
+</html>
