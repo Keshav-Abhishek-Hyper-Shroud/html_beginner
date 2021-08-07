@@ -6,10 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Queries | CSS Grid</title>
     <style>
-        
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            padding: 0.5%;
+            grid-template-areas: 'nav nav nav nav' 'section section section aside' 'footer footer footer footer';
+        }
+
+        .item{
+            background-color: bisque;
+            padding: 3px;
+            border: 2px solid rgb(255, 0, 0);
+            border-radius: 20px;
+        }
+
+        nav{
+            grid-area: nav;
+        }
+
+        section{
+            grid-area: section;
+        }
+
+        aside{
+            grid-area: aside;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+
+        @media (max-width: 600px){
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px){
+            nav{
+                background-color: aqua !important;
+            }
+        }
+
+        @media (max-width: 400px){
+            nav{
+                background-color: black !important;
+                font-weight: bolder;
+                color: white;
+            }
+        }
+
+        @media (max-width: 900px){
+            .container{
+                grid-template-areas: 'nav nav nav nav' 'section section section section' 'aside aside aside aside' 'footer footer footer footer';
+            }
+        }
     </style>
 </head>
 <body>
-    
+
+    <div class="container">
+        <nav class="item">
+            <span>Home</span>
+            <span>About</span>
+            <span>Contact</span>
+            <span>Help!</span>
+        </nav>
+
+        <section class="item"><h2 style="text-align: center;">Learn CSS in Hindi</h2><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, aliquid tempore quis odio nostrum dolore itaque labore enim consequatur ipsum, saepe nisi facilis error, quasi dolores aut vel officia cupiditate porro dolorem exercitationem cum? Error alias architecto aperiam unde quae distinctio molestias numquam dignissimos deserunt, consequatur commodi placeat modi reprehenderit incidunt, ex saepe natus aut porro. Quo officia veniam eos tempora culpa sapiente eius dicta atque corporis maxime dolores modi a ad, porro delectus? Quo, quisquam. Et, adipisci quis commodi fugit sit necessitatibus vitae autem tenetur, totam, tempora veniam voluptates cupiditate accusantium quo veritatis id sed ullam repellat error? Asperiores mollitia ad, eum omnis consequatur accusamus adipisci aut autem obcaecati ipsam quod labore eligendi officia quaerat maiores culpa perspiciatis corporis officiis fugiat dolorem, accusantium assumenda corrupti vitae. Rerum quibusdam odit, quos vel odio porro asperiores esse illum assumenda, veniam corporis accusantium eligendi quasi. Vitae explicabo fugiat ut odio, veniam aperiam alias quae, labore ipsam provident aspernatur, aliquam dolor commodi placeat velit accusantium consectetur deleniti libero facilis sit? Iste fugiat iure aliquam aliquid, molestias aperiam illum quaerat praesentium ipsa inventore nobis, eum ipsum molestiae alias eveniet harum dolore distinctio, reprehenderit rem magni maxime qui? Ab consequuntur asperiores adipisci explicabo natus commodi neque, quam voluptatibus similique qui magnam at a expedita beatae consectetur repudiandae placeat vel officia. Obcaecati hic quidem, corporis molestias sequi ea provident distinctio, enim, quis quisquam eveniet. Repellat enim veniam temporibus voluptas perspiciatis, magnam consectetur veritatis, voluptatem facilis commodi ut tempore voluptatibus. Magnam fugit dolor reprehenderit molestiae eos, exercitationem voluptas quod tempora in, aut aspernatur qui commodi numquam nam quisquam veniam. Ab, iste totam dolorum cupiditate distinctio obcaecati, et quae dignissimos, temporibus magnam quaerat sunt molestias officia delectus aperiam enim. Impedit, molestiae libero aut obcaecati quae totam neque sed nihil. Deserunt dicta accusamus corrupti saepe maiores autem, nam pariatur?</p></section>
+
+        <aside class="item"><h1 style="text-align: center;">More about us</h1><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse hic modi cupiditate corporis dolorem autem quasi expedita inventore aperiam? Porro magni veritatis est voluptates magnam rerum reprehenderit recusandae. Illo quisquam, quo id assumenda provident qui enim, sed porro obcaecati doloremque temporibus accusantium debitis? Voluptatem atque incidunt a! Deleniti unde voluptates facilis corrupti quasi beatae eius sunt odit ea. Et aliquid saepe quae illum maxime repellat ut, obcaecati reprehenderit cumque iure dicta animi suscipit magni temporibus ipsam fugit, eius quibusdam? Inventore veniam laborum beatae error fuga doloribus odit delectus hic nesciunt eligendi eaque quaerat est sunt cum officiis accusantium rerum vero deleniti odio consectetur, amet itaque, neque enim! Dolor pariatur commodi provident in ullam mollitia, vero animi voluptates possimus, illum incidunt porro at. Repudiandae consequatur est, labore reprehenderit qui nulla error sed omnis fugiat ut magnam! Recusandae aspernatur rem veritatis eveniet, nostrum quasi, illo nam obcaecati tempore harum magni eos a.</p></aside>
+
+        <footer class="item" style="text-align: right; margin-top: 0.5%;">Copyright &copy; Keshav Abhishek 2021</footer>
+    </div>
 </body>
 </html>
