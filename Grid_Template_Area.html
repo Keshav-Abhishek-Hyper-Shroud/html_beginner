@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: 'navbar navbar navbar navbar' 'section section section rside' 'footer footer footer footer';
+        }
+
+        .item{
+            background-color: antiquewhite;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 3px 3px;
+            font-size: 18px;
+        }
+
+        #navbar{
+            grid-area: navbar;
+            text-align: center;
+        }
+
+        #section{
+            grid-area: section;
+            text-align: center;
+        }
+
+        #rside{
+            grid-area: rside;
+            text-align: center;
+        }
+
+        footer{
+            grid-area: footer;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navbar" class="item">Home About Contact Rate</div>
+
+        <div id="section" class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aperiam optio voluptatibus et excepturi delectus adipisci commodi, quidem, beatae iure amet expedita non quasi perspiciatis exercitationem. Dicta, itaque beatae laboriosam, culpa excepturi illum odit tempore ut asperiores, hic delectus sed! A itaque eius eos? Illo commodi placeat vitae sunt! Asperiores iure odit eius error eligendi culpa necessitatibus dolores minima itaque laudantium, iusto voluptas sed consectetur nisi esse numquam ut tempora sunt fuga! Quia quasi a doloremque, iste ipsam exercitationem unde temporibus beatae sit distinctio, tempore voluptatibus. Fugit impedit facilis aperiam, maiores laborum at, non earum dolorum ad quasi et nulla eligendi unde? Fugiat dolores natus soluta commodi neque sint omnis laborum aspernatur recusandae, ab excepturi, nisi quae corrupti? A sunt enim odio ullam illo magni ipsam laborum nostrum repudiandae ea voluptatibus, reprehenderit cupiditate laboriosam dolorem adipisci quae amet corporis? Inventore, quaerat non laudantium cum ad animi. Aperiam sapiente, sunt illo sit commodi sint dolores in exercitationem ea autem labore fuga iure tempore? Non minus assumenda commodi nobis doloribus laboriosam nostrum dignissimos nisi! Iste corrupti necessitatibus unde facilis? Hic, totam optio nemo eaque voluptatum repellendus sit dolores et blanditiis eveniet tempore unde similique provident quidem vitae! Voluptas molestias cupiditate magni ea?</div>
+
+        <div id="rside" class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolore nostrum, quo ipsa mollitia illo autem amet laboriosam quos, accusamus voluptas veritatis dolorum commodi ex eligendi eveniet dolorem, harum voluptatibus aliquam impedit? Aliquam saepe illum dignissimos magnam rem dolor nesciunt debitis, veritatis id accusamus alias nulla quam quasi ea culpa vero quisquam suscipit possimus, sapiente doloremque, numquam temporibus ex cum. Molestias tenetur totam sunt fugit, in ducimus cum delectus repellat alias vel magnam earum voluptatibus ipsa quisquam maiores non et reiciendis a itaque vero vitae aliquam voluptas eligendi praesentium. Sequi cum soluta itaque iusto veniam aperiam vel minima nulla sint.</div>
+
+        <footer class="item">Thank You</footer>
+    </div>
+</body>
+</html>
