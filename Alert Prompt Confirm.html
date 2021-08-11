@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Prompt Confirm</title>
+</head>
+<body>
+    <script>
+        // Alert in in-browser Js
+        // alert(message); - Doesn't returns anything
+        alert('This website is the best.');
+
+        // Prompt in in-browser Js
+        // prompt(message); - Returns what you provided in the input field of pop-up messagebox in in-browser
+
+        let reply=prompt('Enter Your Name','Guest');
+        alert(`Hi, ${reply}. Thanks For Joining.`);
+
+        // Confirm
+        // confirm(message) - It returns true or false
+        let ck=confirm('You are about to leave the earth!!');
+
+        let age=prompt('Enter your age','18');
+        if(age>=18){
+            alert('YoHooo!!, You are allowed to this website...')
+        }
+        else if(age<18){
+            alert('Oh No!!, You are not allowed to this website...')
+        }
+    </script>
+</body>
+</html>
