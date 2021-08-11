@@ -23,3 +23,24 @@ function generate(passion) {
 
 let data=generate('Coding...');
 console.log(data);
+
+// A quick QUIZ by "CODEWITHHARRY"
+function check(a,b){
+    if(a>b){
+        console.log(`${a} is greater than ${b}`)
+        console.log(`${b} is smaller than ${a}`)
+    }
+
+    if(a==b){
+        console.log(`${a} is equal to ${b}`)
+    }
+
+    if(a<b){
+        console.log(`${a} is smaller than ${b}`)
+        console.log(`${b} is greater than ${a}`)
+    }
+}
+
+check(18,18)
+check(12,18)
+check(18,12)
