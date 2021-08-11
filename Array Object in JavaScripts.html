@@ -22,8 +22,38 @@
         let VAR3 = true;    // Boolean
         let VAR4 = null;    // Null
         let VAR5 = undefined;   // Undefined
-
         console.log(VAR1, VAR2, VAR3, VAR4, VAR5);
+
+        // Here details is an object
+        let details={
+            name:'KESHAV ABHISHEK',
+            salary: 'Sufficient',
+            channel:'CodeWithKeshav'
+        }
+        console.log(details);
+
+        // variable=[]  Here variable acts as an array
+        let array=[1,2,3,4,5,'KESHAV',true,null,undefined,1.2];
+        console.log(array);
+
+        // variable=new Array() Here variable acts as an array
+        let arr=new Array(1,2,3,4,5,'KESHAV',true,null,undefined,1.2);
+        console.log(arr);
+
+        // variable.sort()  Sorts an array
+        array=array.sort();
+        console.log(array);
+
+        // variable.reverse()  Reverses an array
+        array=array.reverse();
+        console.log(array);
+        
+        // variable.push(value) push function appends value into the variable
+        array.push('I AM PUSHED');
+        console.log(array);
+
+        let group=new Array(23);    // This group has 23 empty items
+        console.log(group);
     </script>
 </body>
 </html>
