@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings Function in JavaScripts</title>
+</head>
+<body>
+    <script>
+        var str='Keshav Abhishek';
+
+        //Targets the 1st occurance of the substing in the main string.
+        console.log(str.indexOf('av'));
+
+        //Targets the last occurance of the substing in the main string.
+        console.log(str.lastIndexOf('e'));
+
+        // Slicing a string
+        // console.log(str.slice(i,n)) [prints the substrings having index i,i+1,i+2,i+3,....,n-1]
+        console.log(str.slice(0,6));
+
+        // console.log(str.substr(i,n)) [prints the substrings starting from index number "i" and prints "n" consecutive substrings]
+        console.log(str.substr(1,7));
+
+        // console.log(str.substring(a,b)) [prints the substrings having index a,a+1,a+2,a+3,....,b-1 (Given that a and b must be +ve numbers)]
+        console.log(str.substring(1,7));
+
+        // string.replace('string to be replaced','string to be replaced with') [within the string]
+        var replaced=str.replace('a','k');
+        console.log(replaced);
+
+        // str.toUpperCase() [This function makes all the letters of the string in uppercase]
+        console.log(str.toUpperCase());
+
+        // str.toLowerCase() [This function makes all the letters of the string in lowercase]
+        console.log(str.toLowerCase());
+
+        // string.trim() [This function trims the unusual whitespaces from LHS & RHS of the string]
+        console.log('       A       B       C       '.trim());
+
+        // string.charAt(k) [This function returns a substring located at index number k]
+        console.log(str.charAt(2));
+
+        // string.charCodeAt(k) [This function returns the code of substring based on UTF-16 located at index number k]
+        console.log(str.charCodeAt(2))
+
+    </script>
+</body>
+</html>
