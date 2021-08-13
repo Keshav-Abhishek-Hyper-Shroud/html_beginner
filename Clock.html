@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Clock</title>
+    <style>
+        .container{
+            width: fit-content;
+            height: fit-content;
+            display: grid;
+            border: 2px solid red;
+            grid-template-areas: 'titlebar titlebar titlebar' 'time time time';
+            border-radius: 20px;
+            padding: 5px 20px;
+        }
+
+        #titlebar{
+            color: red;
+            position: relative;
+            grid-area: titlebar;
+            font-family: 'Baloo';
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #time{
+            grid-area: time;
+            font-family: 'Baloo';
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="titlebar">Web Based Clock | JavaScripts Powered</div>
+        <div id="time">12 : 00 : 00</div>
+    </div>
+    <script>
+        function update(){
+            let curr_time=new Date();
+            let update_text=`${curr_time.getHours()-12} : ${curr_time.getMinutes()} : ${curr_time.getSeconds()}`;
+
+            let setTime=document.getElementById('time');
+            setTime.innerText=update_text;
+        }
+
+        setInterval(update, 1000);
+    </script>
+</body>
+</html>
