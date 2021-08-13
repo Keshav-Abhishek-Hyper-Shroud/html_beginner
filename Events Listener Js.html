@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        .styleme{
+            padding: 10px 14px;
+            background-color: red;
+            border: 2px solid red;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, quod vero, veniam neque excepturi incidunt nobis consequuntur dicta beatae aspernatur voluptate nam. Quae esse totam eveniet assumenda illo aspernatur minus iure autem ipsam sunt praesentium consectetur laboriosam, nobis distinctio quam nesciunt dolorem sed hic ut numquam provident? Molestiae, odio perspiciatis? Itaque, distinctio? Tenetur molestiae nam voluptate, assumenda unde at dolor aspernatur odit modi tempore cupiditate dolorum amet nulla id placeat obcaecati aliquid! Quis perspiciatis, voluptatem perferendis delectus eius hic quidem corrupti ab, esse consectetur voluptate repellat atque labore, veniam quod! Debitis odit ut ipsam aliquam rem iure soluta iusto, accusantium sint aliquid. Aperiam odit dolores praesentium provident officiis, facere iste voluptatum minima exercitationem itaque consequatur accusantium quis autem fugiat! Dolor sit ipsam voluptate quidem consequuntur! Velit ut aliquam labore? Tempore quos, laborum aut totam commodi corporis id deleniti facilis quo ullam cum ducimus minus voluptatem sapiente nam. Quasi dolorem, similique amet iure culpa, ipsum officia distinctio veniam consectetur et eaque ab. Blanditiis soluta ut debitis consectetur quam reiciendis unde at optio. Voluptate perferendis laudantium libero quisquam, eaque quod earum molestiae sint ipsam inventore, ad, ab laboriosam. Illum illo esse architecto ullam assumenda beatae saepe facere distinctio quam ipsa error exercitationem sit adipisci culpa corporis voluptatem alias labore, nesciunt qui? Excepturi a quasi numquam, aliquid doloremque eligendi? Dicta corrupti, quos magni harum perspiciatis beatae nesciunt modi vitae id iusto voluptatibus totam culpa similique pariatur quaerat ipsam assumenda odio laborum placeat qui eligendi, voluptas nobis? Omnis soluta quasi aut qui! Dignissimos, obcaecati.</p>
+
+    <button id="btn" onclick="hide()" class="styleme">Hide</button>
+    <button id="btnbold" onclick="bold()" class="styleme">Bold</button>
+    <button id="btnfontfamily" onclick="chgtext()" class="styleme">Change Font Family</button>
+
+    <script>
+        
+        // let obj=document.getElementById('para');
+        // obj.addEventListener('mouseout',function run(){
+        //     alert('Oops!! - You are out of the paragraph region.')
+        // });
+
+        // let objt=document.getElementById('para');
+        // objt.addEventListener('mouseover',function run(){
+        //     alert('Oops!! - You got inside the paragraph region.')
+        // });
+
+        function hide(){
+            let obj=document.getElementById('para');
+            let button=document.getElementById('btn')
+            if(obj.style.display!='none'){
+                obj.style.display='none';
+                button.innerText='Show';
+            }
+            else{
+                obj.style.display='block';
+                button.innerText='Hide';
+            }
+        }
+
+        function bold(){
+            let obj=document.getElementById('para');
+            let button=document.getElementById('btnbold');
+            if(obj.style.fontWeight!='bolder'){
+                obj.style.fontWeight='bolder';
+                button.innerText='Unbold'
+            }
+            else{
+                obj.style.fontWeight='normal';
+                button.innerText='Bold'
+            }
+        }
+
+        function chgtext(){
+            let obj=document.getElementById('para');
+            let name=prompt('Enter font family (*Case Sensitive)','Times New Roman');
+            if(name){
+                obj.style.fontFamily=name;
+            }
+        }
+    </script>
+</body>
+</html>
