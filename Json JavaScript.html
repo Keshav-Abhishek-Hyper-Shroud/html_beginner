@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json | JavaScript</title>
+</head>
+<body>
+    <script>
+        let jsonobj={
+            name:"KESHAV ABHISHEK",
+            salary:50000,
+            country:"India"
+        }
+
+        let jsonobjtext=JSON.stringify(jsonobj);
+
+        console.log(jsonobj);
+        console.log(jsonobjtext);// Returns a string out of Object
+
+        jsonobjtext=jsonobjtext.replace('50000','100000');
+        let newjason=JSON.parse(jsonobjtext);
+        console.log(jsonobjtext);
+        console.log(newjason);
+    </script>
+</body>
+</html>
