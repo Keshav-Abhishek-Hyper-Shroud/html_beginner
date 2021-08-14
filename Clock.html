@@ -41,10 +41,16 @@
     <script>
         function update(){
             let curr_time=new Date();
-            let update_text=`${curr_time.getHours()-12} : ${curr_time.getMinutes()} : ${curr_time.getSeconds()}`;
-
-            let setTime=document.getElementById('time');
-            setTime.innerText=update_text;
+            if(curr_time.getHours()<12){
+                let update_text=`${curr_time.getHours()} : ${curr_time.getMinutes()} : ${curr_time.getSeconds()}`;
+                let setTime=document.getElementById('time');
+                setTime.innerText=update_text;
+            }
+            else{
+                let update_text=`${curr_time.getHours()-12} : ${curr_time.getMinutes()} : ${curr_time.getSeconds()}`;
+                let setTime=document.getElementById('time');
+                setTime.innerText=update_text;
+            }
         }
 
         setInterval(update, 1000);
