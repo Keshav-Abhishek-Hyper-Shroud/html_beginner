@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Slide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bahianita&display=swap');
+        #mainframe{
+            display: flex;
+            border: 1px solid grey;
+            height: 300px;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+        #toggleframe{
+            display: grid;
+            height: 30px;
+            width: 300px;
+            margin-top: 10px;
+            justify-content: space-between;
+            grid-template-areas: 'leftclick dots rightclick';
+        }
+        #leftclick{
+            grid-area: leftclick;
+            padding: 0px;
+            width: 75px;
+            border: none;
+            background-color: aqua;
+            border-radius: 8px;
+            border: 2px solid black;
+            font-size: 17px;
+            font-weight: bolder;
+            cursor: pointer;
+            font-family: 'Times New Roman';
+        }
+        #dots{
+            grid-area: dots;
+            margin-top: 5px;
+        }
+        #rightclick{
+            grid-area: rightclick;
+            padding: 0px;
+            width: 75px;
+            border: none;
+            background-color: aqua;
+            border-radius: 8px;
+            border: 2px solid black;
+            font-size: 17px;
+            font-weight: bolder;
+            cursor: pointer;
+            font-family: 'Times New Roman';
+        }
+        .styleme:hover{
+            cursor: no-drop;
+        }
+        #insideframe{
+            height: 290px;
+            width: 290px;
+            background-color: rgb(56, 56, 219);
+        }
+        #insideframe{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Bahianita', cursive;
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainframe">
+        <div id="insideframe">Page 1</div>
+    </div>
+    <div id="toggleframe">
+        <button id="leftclick">Back</button>
+        <div id="dots">
+            <input type="radio" id="page-1" class="styleme" checked=true>
+            <input type="radio" id="page-2" class="styleme">
+            <input type="radio" id="page-3" class="styleme">
+            <input type="radio" id="page-4" class="styleme">
+            <input type="radio" id="page-5" class="styleme">
+        </div>
+        <button id="rightclick">Next</button>
+    </div>
+    <script>
+        let clickleftin=document.getElementById('leftclick');
+        clickleftin.addEventListener('mousedown',function clickinleft(){
+            clickleftin.style.boxShadow='2px 2px 0px black';
+            let text=document.getElementById('insideframe');
+            if(text.innerText=='Page 5'){
+                text.innerText='Page 4';
+                rightclick.disabled=false;
+                document.getElementById('page-1').checked=false;
+                document.getElementById('page-2').checked=false;
+                document.getElementById('page-3').checked=false;
+                document.getElementById('page-4').checked=true;
+                document.getElementById('page-5').checked=false;
+                document.getElementById('insideframe').style.backgroundColor='black';
+                document.getElementById('insideframe').style.color='yellow';
+            }
+            else if(text.innerText=='Page 4'){
+                text.innerText='Page 3';
+                document.getElementById('page-1').checked=false;
+                document.getElementById('page-2').checked=false;
+                document.getElementById('page-3').checked=true;
+                document.getElementById('page-4').checked=false;
+                document.getElementById('page-5').checked=false;
+                document.getElementById('insideframe').style.backgroundColor='black';
+                document.getElementById('insideframe').style.color='white';
+            }
+            else if(text.innerText=='Page 3'){
+                text.innerText='Page 2';
+                document.getElementById('page-1').checked=false;
+                document.getElementById('page-2').checked=true;
+                document.getElementById('page-3').checked=false;
+                document.getElementById('page-4').checked=false;
+                document.getElementById('page-5').checked=false;
+                document.getElementById('insideframe').style.backgroundColor='red';
+                document.getElementById('insideframe').style.color='white';
+
+            }
+            else if(text.innerText=='Page 2'){
+                text.innerText='Page 1';
+                document.getElementById('page-1').checked=true;
+                document.getElementById('page-2').checked=false;
+                document.getElementById('page-3').checked=false;
+                document.getElementById('page-4').checked=false;
+                document.getElementById('page-5').checked=false;
+                document.getElementById('insideframe').style.backgroundColor='#3838db';
+                leftclick.style.boxShadow='none';
+                leftclick.disabled=true;
+            }
+        });
+        let clickleftout=document.getElementById('leftclick');
+        clickleftout.addEventListener('mouseup',function clickoutleft(){
+            clickleftout.style.boxShadow='none';
+        });
+        
+        let clickrightin=document.getElementById('rightclick');
+        clickrightin.addEventListener('mousedown',function clickinright(){
+            clickrightin.style.boxShadow='2px 2px 0px black';
+            let text=document.getElementById('insideframe');
+            if(text.innerText=='Page 1'){
+                text.innerText='Page 2';
+                leftclick.disabled=false;
+                document.getElementById('page-1').checked=false;
+                document.getElementById('page-2').checked=true;
+                document.getElementById('page-3').checked=false;
+                document.getElementById('page-4').checked=false;
+                document.getElementById('page-5').checked=false;
+                document.getElementById('insideframe').style.backgroundColor='red';
+                document.getElementById('insideframe').style.color='white';
+            }
+            else if(text.innerText=='Page 2'){
+                text.innerText='Page 3';
+                document.getElementById('page-1').checked=false;
+                document.getElementById('page-2').checked=false;
+                document.getElementById('page-3').checked=true;
+                document.getElementById('page-4').checked=false;
+                document.getElementById('page-5').checked=false;
+                document.getElementById('insideframe').style.backgroundColor='black';
+                document.getElementById('insideframe').style.color='white';
+            }
+            else if(text.innerText=='Page 3'){
+                text.innerText='Page 4';
+                document.getElementById('page-1').checked=false;
+                document.getElementById('page-2').checked=false;
+                document.getElementById('page-3').checked=false;
+                document.getElementById('page-4').checked=true;
+                document.getElementById('page-5').checked=false;
+                document.getElementById('insideframe').style.backgroundColor='black';
+                document.getElementById('insideframe').style.color='yellow';
+            }
+            else if(text.innerText=='Page 4'){
+                text.innerText='Page 5';
+                document.getElementById('page-1').checked=false;
+                document.getElementById('page-2').checked=false;
+                document.getElementById('page-3').checked=false;
+                document.getElementById('page-4').checked=false;
+                document.getElementById('page-5').checked=true;
+                document.getElementById('insideframe').style.backgroundColor='yellow';
+                document.getElementById('insideframe').style.color='black';
+                rightclick.style.boxShadow='none';
+                rightclick.disabled=true;
+            }
+        });
+        let clickrightout=document.getElementById('rightclick');
+        clickrightout.addEventListener('mouseup',function clickoutright(){
+            clickrightout.style.boxShadow='none';
+        });
+
+        document.getElementById('page-1').disabled=true;
+        document.getElementById('page-2').disabled=true;
+        document.getElementById('page-3').disabled=true;
+        document.getElementById('page-4').disabled=true;
+        document.getElementById('page-5').disabled=true;
+
+        document.getElementById('leftclick').disabled=true;
+    </script>
+</body>
+</html>
