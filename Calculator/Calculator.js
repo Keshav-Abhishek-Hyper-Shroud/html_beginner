@@ -107,13 +107,19 @@ document.getElementById('equal').addEventListener('mousedown', ()=>{
         document.getElementById('screen').value='NaN';
         setTimeout(() => {
             document.getElementById('screen').value='';
-        }, 1000);
+        }, 500);
     }
 
     if(document.getElementById('screen').value=='Infinity'){
         setTimeout(() => {
             document.getElementById('screen').value='';
-        }, 1000);
+        }, 500);
+    }
+
+    if(document.getElementById('screen').value=='undefined'){
+        setTimeout(() => {
+            document.getElementById('screen').value='';
+        }, 500);
     }
 });
 
